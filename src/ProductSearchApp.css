@@ -1,0 +1,62 @@
+.ProductSearchApp {
+  text-align: center;
+}
+
+.ProductSearchApp-header {
+  background-color: #333e48;
+  padding: 20px;
+  color: white;
+}
+
+.ProductSearchApp-title {
+  font-size: 1.5em;
+}
+
+.ProductSearchApp .resultsContainer {
+  background-color: #f1f1f1;
+  max-height: 290px;
+  overflow: hidden;
+}
+
+.ProductSearchApp .resultsContainer ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.ProductSearchApp .resultsContainer li {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.ProductSearchApp .resultsContainer li span {
+  font-weight: bold;
+}
+
+.ProductSearchApp .resultsContainer li:hover {
+  cursor: pointer;  
+  background-color: #ff9e16;
+}
+
+.resultsContainer .resultName {
+  font-size: 18px;
+  text-align: left;
+}
+
+.resultsContainer .resultInfo {
+  font-size: 14px;
+  text-align: left;
+  color: #999;
+}
+
+.ProductSearchApp .searchContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.ProductSearchApp .searchContainer input {
+  line-height: 1.5em;
+  font-size: 1.5em;
+  vertical-align: middle;
+  min-width: 300px;
+}
