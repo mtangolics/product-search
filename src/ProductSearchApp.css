@@ -27,15 +27,15 @@
 .ProductSearchApp .resultsContainer li {
   padding: 10px;
   border-bottom: 1px solid #ccc;
+  cursor: pointer; 
+}
+
+.ProductSearchApp .resultsContainer li.selected,.ProductSearchApp .resultsContainer li:hover {
+  background-color: #ff9e16;
 }
 
 .ProductSearchApp .resultsContainer li span {
   font-weight: bold;
-}
-
-.ProductSearchApp .resultsContainer li:hover {
-  cursor: pointer;  
-  background-color: #ff9e16;
 }
 
 .resultsContainer .resultName {

@@ -12,12 +12,10 @@ const SearchResults = (props) => {
 
     const formatNameDiv = (name) => {
         const index = name.toLowerCase().indexOf(props.input.toLowerCase());
-        // Maintain case of match
+
         const start = name.slice(0,index);
         const match = name.slice(index, index + props.input.length);
         const end = name.slice(index + props.input.length);
-
-        //debugger;
 
         return (
             <div className="resultName">
@@ -26,13 +24,9 @@ const SearchResults = (props) => {
         );
     };
 
-    if(!props.results || props.results.length === 0) {
-        return <div className="resultsContainer" />;
-    }
-
-    const resultList = props.results.map(r => {
+    const resultList = props.results && props.results.length > 0 ? props.results.map((r,i) => {
             return (
-                <li onClick={() => window.open(r.url,'_blank')}>
+                <li className={props.curSelection === i ? 'selected' : undefined} onClick={() => props.selectionHandler(r)} key={i} >
                     {formatNameDiv(r.name)}
                     <div className="resultInfo">
                         {type_map[r.type]}
@@ -40,7 +34,7 @@ const SearchResults = (props) => {
                 </li>
             );
         }
-    );
+    ) : [];
 
     return (
         <div className="resultsContainer">

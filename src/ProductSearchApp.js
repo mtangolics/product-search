@@ -10,10 +10,12 @@ class ProductSearchApp extends Component {
     super();
     this.state = {
       searchResults: [],
-      searchInput: ''
+      searchInput: '',
+      recentSearches: []
     };
-    this.searchJson = debounce(this.searchJson.bind(this), 300);
 
+    this.searchJson = debounce(this.searchJson.bind(this), 300);
+    this.handleSelection = this.handleSelection.bind(this);
     this.handleSearchInput = this.handleSearchInput.bind(this);
   }
 
@@ -23,7 +25,11 @@ class ProductSearchApp extends Component {
         <header className="ProductSearchApp-header">
           <h1>Product Search Demo</h1>
         </header>
-        <SearchBox inputHandler={this.handleSearchInput} searchInput={this.state.searchInput} searchResults={this.state.searchResults} />
+        <SearchBox 
+          inputHandler={this.handleSearchInput} 
+          searchInput={this.state.searchInput} 
+          searchResults={this.state.searchResults} 
+          selectionHandler={this.handleSelection} />
       </div>
     );
   }
@@ -38,13 +44,16 @@ class ProductSearchApp extends Component {
     });
   }
 
+  handleSelection(product) {
+    window.open(product.url, '_blank');
+  }
+
   searchJson() {
     let results = [];
 
     if(JsonData && JsonData.products) {
-      const input = this.state.searchInput.toLowerCase();
-      
       if(this.state.searchInput) {
+        const input = this.state.searchInput.toLowerCase();
         let exactResults = [];
         let inResults = [];
 
@@ -62,7 +71,7 @@ class ProductSearchApp extends Component {
       }
 
       this.setState({
-        searchResults: results
+        searchResults: results.slice(0,5)
       });
     }
   }
