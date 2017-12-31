@@ -18,7 +18,7 @@ const SearchResults = (props) => {
         const end = name.slice(index + props.input.length);
 
         return (
-            <div className="resultName">
+            <div className='resultName'>
                 {start}<span>{match}</span>{end}
             </div>
         );
@@ -28,7 +28,7 @@ const SearchResults = (props) => {
             return (
                 <li className={props.curSelection === i ? 'selected' : undefined} onClick={() => props.selectionHandler(r)} key={i} >
                     {formatNameDiv(r.name)}
-                    <div className="resultInfo">
+                    <div className='resultInfo'>
                         {type_map[r.type]}
                     </div>
                 </li>
@@ -37,7 +37,7 @@ const SearchResults = (props) => {
     ) : [];
 
     return (
-        <div className="resultsContainer">
+        <div className='resultsContainer'>
             <ul>
                 {resultList}
             </ul>

@@ -21,8 +21,8 @@ class ProductSearchApp extends Component {
 
   render() {
     return (
-      <div className="ProductSearchApp">
-        <header className="ProductSearchApp-header">
+      <div className='ProductSearchApp'>
+        <header className='ProductSearchApp-header'>
           <h1>Product Search Demo</h1>
         </header>
         <SearchBox 

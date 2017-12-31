@@ -19,7 +19,7 @@ const SearchBox = (props) => {
 
     return (
         <div className='searchContainer'>
-            <input type='text' value={props.searchInput} onChange={props.inputHandler} onKeyDown={handleKeyPress} placeholder="Search for a product..." />
+            <input type='text' value={props.searchInput} onChange={props.inputHandler} onKeyDown={handleKeyPress} placeholder='Search for a product...' />
             <SearchResults results={props.searchResults} input={props.searchInput} selectionHandler={props.selectionHandler} curSelection={selectedProductIndex} />
         </div>
     );
