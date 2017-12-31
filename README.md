@@ -1,14 +1,10 @@
-Product Search Demo
+# Product Search Demo
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
-## Table of Contents
+## Installation
 
-- [Updating to New Releases](#updating-to-new-releases)
-- [Sending Feedback](#sending-feedback)
-- [Folder Structure](#folder-structure)
-- [Available Scripts](#available-scripts)
-  - [npm start](#npm-start)
-  - [npm test](#npm-test)
-  - [npm run build](#npm-run-build)
-  - [npm run eject](#npm-run-eject)
+1. Clone git repo
+2. Run 'npm install'
+3. Run 'npm start'
+4. Navigate to http://localhost:3000 (should open automatically)
